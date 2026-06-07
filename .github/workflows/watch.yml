@@ -1,0 +1,37 @@
+name: ladder-watch
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # 每 5 分鐘(UTC,實際可能延遲幾分鐘)
+  workflow_dispatch: {}      # 手動觸發測試用
+
+permissions:
+  contents: write            # 要把 armed 狀態 commit 回 state.json
+
+concurrency:
+  group: ladder-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 檢查到價
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 watch.py
+
+      - name: 狀態寫回(有變動才 commit)
+        run: |
+          if ! git diff --quiet state.json; then
+            git config user.name "ladder-watch-bot"
+            git config user.email "actions@github.com"
+            git add state.json
+            git commit -m "state: $(date -u +%Y-%m-%dT%H:%M)Z"
+            git pull --rebase origin main || true
+            git push
+          fi

@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "start_price": 45000,
+  "code": "TXF",
+  "rearm_pct": 1.5,
+  "levels": [
+    { "price": 41000, "note": "" },
+    { "price": 39000, "note": "" },
+    { "price": 37000, "note": "" },
+    { "price": 35000, "note": "" },
+    { "price": 33000, "note": "" }
+  ],
+  "armed": {
+    "41000": true,
+    "39000": true,
+    "37000": true,
+    "35000": true,
+    "33000": true
+  },
+  "history": [],
+  "last_check": null
+}
