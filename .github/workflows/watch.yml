@@ -35,3 +35,5 @@ jobs:
             git pull --rebase origin main || true
             git push
           fi
+
+# touch: 重新註冊 cron 排程 2026-06-07
