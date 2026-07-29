@@ -26,17 +26,26 @@
     }
   ],
   "armed": {
-    "41000": true,
+    "41000": false,
     "39000": true,
     "37000": true,
     "35000": true,
     "33000": true
   },
-  "history": [],
+  "history": [
+    {
+      "ts": "2026-07-29T11:31:39+08:00",
+      "price": 40040.0,
+      "levels": [
+        41000.0
+      ],
+      "telegram_sent": true
+    }
+  ],
   "last_check": {
-    "ts": "2026-07-29T08:07:18+08:00",
-    "price": 41889.0,
-    "session": "night",
-    "quoted_at": "2026-07-29T04:59:58"
+    "ts": "2026-07-29T11:31:39+08:00",
+    "price": 40040.0,
+    "session": "day",
+    "quoted_at": "2026-07-29T11:31:33"
   }
 }
