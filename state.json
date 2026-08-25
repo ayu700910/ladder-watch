@@ -18,5 +18,10 @@
     "39000": true
   },
   "history": [],
-  "last_check": null
+  "last_check": {
+    "ts": "2026-08-25T15:56:17+08:00",
+    "price": 45062.0,
+    "session": "night",
+    "quoted_at": "2026-08-25T15:56:06"
+  }
 }
