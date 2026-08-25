@@ -11,41 +11,12 @@
     {
       "price": 39000.0,
       "note": ""
-    },
-    {
-      "price": 37000.0,
-      "note": ""
-    },
-    {
-      "price": 35000.0,
-      "note": ""
-    },
-    {
-      "price": 33000.0,
-      "note": ""
     }
   ],
   "armed": {
     "41000": true,
-    "39000": true,
-    "37000": true,
-    "35000": true,
-    "33000": true
+    "39000": true
   },
-  "history": [
-    {
-      "ts": "2026-07-29T11:31:39+08:00",
-      "price": 40040.0,
-      "levels": [
-        41000.0
-      ],
-      "telegram_sent": true
-    }
-  ],
-  "last_check": {
-    "ts": "2026-08-25T15:11:34+08:00",
-    "price": 45097.0,
-    "session": "night",
-    "quoted_at": "2026-08-25T15:11:31"
-  }
+  "history": [],
+  "last_check": null
 }
